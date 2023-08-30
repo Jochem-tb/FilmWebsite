@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <div>
+
+        <h1>HTML Forms</h1>
+    </div>
+
+    <form>
+        <label for="username">Enter Username:</label>
+        <input type="text" id="username" name="username" placeholder="Username" required>
+        <br>
+        <br>
+        <label for="email">Enter Email:</label>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <br>
+        <br>
+        <label for="password">Enter Password</label>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        
+        <br><br>
+    
+
+    
+        <input type="radio" name="gender" value="Male"> Male<br>
+        <input type="radio" name="gender" value="female"> female<br>
+        <input type="radio" name="gender" value="Other"> Other<br>
+    
+
+    <p>Select your age</p>
+
+    
+        <input type="radio" name="age" value="0-25" id="option-1">
+        <label for="option-1">0-25</label>
+        <br>
+        <input type="radio" name="age" value="26-50" id="option-2">
+        <label for="option-2">26-50</label>
+        <br>
+        <input type="radio" name="age" value="51-99" id="option-2">
+        <label for="option-3">51-99</label>
+
+        <br><br>
+
+        <label for="">Security Question:</label>
+        <select name="Question" id="question">
+            <option value="q1">What color are your eyes?</option>
+            <option value="q2">If you are car, which one would you be?</option>
+            <option value="q3">What is your best question</option>
+        </select>
+
+        <br><br>
+
+        <label for="answer">Security Question Answer</label>
+        <input type="text" id="answer" name="answer">
+
+        <br><br>
+
+        <label for="bio">What is your biography?</label><br>
+        <textarea name="bio" id="bio" cols="30" rows="10" placeholder="About you..."></textarea>
+
+        <br><br>
+        
+        <input type="submit" name="submit" id="submit" value="Submit the form">
+    </form>
+</body>
+</html>
