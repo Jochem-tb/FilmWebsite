@@ -4,9 +4,9 @@
   height: 100px;
   float: left;
   top: -5px;
-  left: 15px;
+  left: -7px;
   z-index: 30px;
-  position: absolute;
+  position: static;
 }
 
 li {
@@ -14,13 +14,14 @@ li {
 }
 
 a {
-  position: static;
+  position: relative;
   text-decoration: none;
   padding: 10px;
   font-weight: bold;
   color: rgb(150, 94, 42);
   font-size: 20px;
   font-family: Georgia, 'Times New Roman', Times, serif;
+
 
 }
 
@@ -44,15 +45,16 @@ header {
   align-items: right;
   justify-content: space-between;
   float: right;
-  position: static;
-
+  position: fixed;
 }
 
 .navbar .links {
   display: flex;
   gap: 10rem;
   float: right;
-  position: right;
+  position: relative;
+  margin-top: 25px;
+  margin-right: -12%;
   align-items: right;
 }
 

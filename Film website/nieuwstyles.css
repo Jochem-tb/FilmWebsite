@@ -1,0 +1,282 @@
+/* ---------------------------------------------------GRID------------------------------------- */
+
+
+#content_index {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 10px;
+  max-width: 1200px;
+  position: relative;
+  grid-template-areas:
+    ". . . logo logo logo logo logo logo logo  . ."
+    "nav nav nav nav nav nav nav nav nav nav nav nav"
+    "carousel carousel carousel carousel carousel carousel carousel carousel carousel carousel carousel carousel"
+    "header header header header header header header header header header header header"
+    "main main main main main main main main main main main main"
+    "main main main main main main main main main main main main"
+    "main main main main main main main main main main main main"
+    "footer footer footer footer footer footer footer footer footer footer footer footer ";
+}
+
+#content_index>* {}
+
+header {
+  grid-area: header;
+  background: #3bbced;
+}
+
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(50px, auto);
+  grid-gap: 15px;
+  position: relative;
+}
+
+aside {
+  grid-area: carousel;
+
+}
+
+section {
+  grid-area: logo;
+  background-color: rgba(121, 0, 0, 0.692);
+  width: 600px;
+  text-align: center;
+  border: rgb(0, 0, 0) solid 5px;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px;
+}
+
+footer {
+  grid-area: footer;
+  background: #3bbced;
+  padding: 30px;
+}
+
+/* ------------------------------Logo & Navbar--------------------------- */
+
+nav {
+  grid-area: nav;
+  align-items: center;
+  background-color: rgba(121, 0, 0, 0.692);
+  border: rgb(0, 0, 0) solid 5px;
+  border-radius: 20px;
+  float: center;
+  padding-left: auto;
+  padding-right: auto;
+  font-size: 30px;
+}
+
+nav a {
+  position: static;
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(190, 171, 154);
+  font-size: 30px;
+  transition: color 0.3s;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+nav a:hover {
+  color: rgb(255, 255, 255);
+  display: block;
+  font-size: 1.1em;
+  text-decoration: underline;
+}
+
+.navbar {
+  width: 100%;
+  max-width: 1200px;
+
+}
+
+.navbar .links {
+  display: flex;
+  margin: 28px;
+  margin-left: -5px;
+  justify-content: space-between;
+}
+
+/* ---------------------------------------CAROUSEL----------------------------------- */
+
+aside {
+  min-height: 100px;
+  display: grid;
+  place-items: center;
+}
+
+.slide {
+  height: 250px;
+  width: 200px;
+  display: grid;
+  place-items: center;
+  padding: 15px;
+  perspective: 100px;
+}
+
+.slide img {
+  height: 100%;
+  width: 100%;
+  transition: transform 1s;
+}
+
+.slide a {
+  height: 100%;
+  width: 100%;
+  transition: transform 1s;
+}
+
+
+
+.carousel-slider {
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+  height: 280px;
+  width: 100%;
+}
+
+.carousel-slider:hover .image-slider-track {
+  animation-play-state: paused;
+}
+
+.image-slider-track {
+  display: flex;
+  /* CALC= Pixel slide width * total number slides (13) NIET GOED?? 3000 PX voor 16 slides? */
+  width: 3000px;
+  animation: play 30s linear infinite;
+}
+
+@keyframes play {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-250px*6));
+  }
+}
+
+.carousel-slider::before,
+.carousel-slider::after {
+  background: linear-gradient(to right, rgba(121, 0, 0, 1)0%, rgba(121, 0, 0, 0)100%);
+  content: '';
+  height: 100%;
+  width: 15%;
+  z-index: 2;
+  position: absolute;
+}
+
+.carousel-slider::before {
+  left: 0;
+  top: 0;
+}
+
+.carousel-slider::after {
+  right: 0;
+  top: 0;
+  background: linear-gradient(to left, rgba(121, 0, 0, 1)0%, rgba(255, 255, 255, 0)100%);
+}
+
+.slide img:hover {
+  transform: translateZ(20px);
+  pointer-events: visible;
+}
+
+.slide a:hover {
+  transform: translateZ(20px);
+  pointer-events: none;
+}
+
+/* --------------------------------------- MAIN GENRES --------------------------------------- */
+
+main .genreklik {
+  border: #000, solid, 5px;
+  color: blue;
+}
+
+
+
+body {
+  height: 100vh;
+  background-color: #000;
+  background-image: url("img/background_main.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: -10;
+}
+
+li {
+  list-style: none;
+}
+
+
+
+/* --------------------------------------- BODY HTML --------------------------------------- */
+
+
+body.movies {
+  background-image: url("../Film\ website/img/popcorn.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+  transform-origin: rotate(90deg);
+  position: relative;
+  overflow: hidden;
+
+}
+
+body.aboutme {
+  background: url("img/background_neutral.jpg");
+  color: rgb(197, 255, 221, 1);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+/* --------------------------------------- ABOUT PAGE --------------------------------------- */
+
+h1.title {
+  color: white;
+  font-size: 60px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  border-bottom: 0px;
+  text-align: center;
+}
+
+h5 {
+  color: white;
+  font-style: italic;
+  position: relative;
+  top: -30px;
+  left: -160px;
+  text-align: center;
+}
+
+div.main_text {
+  background-color: rgba(0, 0, 0, 0.185);
+  margin-left: 465px;
+  margin-bottom: 5px;
+}
+
+img.jochem_foto {
+  height: 875px;
+  position: absolute;
+}
+
+ul.lijst1 {
+  position: relative;
+  font-style: italic;
+  font-style: bold;
+}
+
+.highlight {
+  text-decoration: underline;
+}
+
+/* --------------------------------------- DFKJSLDKFJSDLKFJSDLKS --------------------------------------- */
