@@ -85,7 +85,7 @@ nav a {
 nav a:hover {
   color: rgb(255, 255, 255);
   display: block;
-  font-size: 1.1em;
+  font-size: 1.0em;
   text-decoration: underline;
 }
 
@@ -150,7 +150,7 @@ aside {
   display: flex;
   /* CALC= Pixel slide width * total number slides (13) NIET GOED?? 3000 PX voor 16 slides? */
   width: 3000px;
-  animation: play 30s linear infinite;
+  animation: play 25s linear infinite;
 }
 
 @keyframes play {
