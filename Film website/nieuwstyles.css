@@ -20,12 +20,13 @@
     "footer footer footer footer footer footer footer footer footer footer footer footer ";
 }
 
-header {
+header.index {
   grid-area: header;
-  background: #3bbced;
+  background: rgba(121, 0, 0, 0.692);
+  border: #000000 double 8px;
 }
 
-main {
+main.index {
   grid-area: main;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -34,11 +35,11 @@ main {
   position: relative;
 }
 
-aside {
+aside.index {
   grid-area: carousel;
 }
 
-section {
+section.index {
   grid-area: logo;
   background-color: rgba(121, 0, 0, 0.692);
   width: 600px;
@@ -196,6 +197,31 @@ nav a:hover {
 .slide a:hover {
   transform: translateZ(20px);
   pointer-events: none;
+}
+
+/* --------------------------------------TEXT---------------------------- */
+
+header.index {
+  color: rgb(190, 171, 154);
+  max-width: 1200px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 20px;
+  font-size: 1.2em;
+}
+
+header.index h1 {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+header.index p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 500;
+}
+
+header.index p span.highlight {
+  font-weight: bolder;
 }
 
 /* --------------------------------------- MAIN GENRES --------------------------------------- */
