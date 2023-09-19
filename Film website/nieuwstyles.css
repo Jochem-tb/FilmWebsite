@@ -1,6 +1,6 @@
 /* ---------------------------------------------------GRID------------------------------------- */
 
-
+/* ------------------------------------INDEX INDELING -------------------------------------- */
 #content_index {
   margin: 0 auto;
   display: grid;
@@ -36,7 +36,6 @@ main {
 
 aside {
   grid-area: carousel;
-
 }
 
 section {
@@ -95,7 +94,14 @@ nav a:hover {
 
 }
 
-.navbar .links {
+#NavIndex .navbar .links {
+  display: flex;
+  margin: 28px;
+  margin-left: -5px;
+  justify-content: space-between;
+}
+
+#NavMovie .navbar .links {
   display: flex;
   margin: 28px;
   margin-left: -5px;
@@ -104,7 +110,7 @@ nav a:hover {
 
 /* ---------------------------------------CAROUSEL----------------------------------- */
 
-aside {
+#index aside {
   min-height: 100px;
   display: grid;
   place-items: center;
