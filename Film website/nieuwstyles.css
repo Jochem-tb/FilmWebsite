@@ -20,8 +20,6 @@
     "footer footer footer footer footer footer footer footer footer footer footer footer ";
 }
 
-#content_index>* {}
-
 header {
   grid-area: header;
   background: #3bbced;
@@ -54,7 +52,9 @@ section {
 
 footer {
   grid-area: footer;
-  background: #3bbced;
+  display: grid;
+  grid-template-columns: 100px, auto, 100px;
+  grid-auto-rows: minmax(100px, auto);
   padding: 30px;
 }
 
@@ -131,8 +131,6 @@ aside {
   transition: transform 1s;
 }
 
-
-
 .carousel-slider {
   display: grid;
   place-items: center;
@@ -197,8 +195,37 @@ aside {
 /* --------------------------------------- MAIN GENRES --------------------------------------- */
 
 main .genreklik {
-  border: #000, solid, 5px;
-  color: blue;
+  color: rgb(190, 171, 154);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 30px;
+  background-color: rgba(0, 0, 0, 0.678);
+}
+
+.genreklik p {
+  text-align: center;
+  position: static;
+  text-decoration: underline;
+  padding: 10px;
+  font-weight: bolder;
+  font-size: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  z-index: 10;
+  border: transparent solid 3px;
+}
+
+.genreklik p:hover {
+  color: white;
+  border: white solid 3px;
+  border-radius: 50px;
+}
+
+.rec_img {
+  max-height: 400px;
+  max-width: 300px;
+  size: 100%;
 }
 
 
@@ -207,6 +234,8 @@ body {
   height: 100vh;
   background-color: #000;
   background-image: url("img/background_main.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
   z-index: -10;
@@ -238,6 +267,160 @@ body.aboutme {
 }
 
 
+/* --------------------------------------- FOOTER --------------------------------------- */
+
+footer {
+  background-color: #111111dc;
+}
+
+#footerLeft {
+  grid-column: 1 / 2;
+}
+
+#footerMiddle {
+  grid-column: 2 / 6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#footerRight {
+  grid-column: 6 / 7;
+}
+
+#footerBottom {
+  grid-column: 1 / 2;
+}
+
+.footer_container {
+  width: 100%;
+}
+
+.social_icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social_icons a {
+  text-decoration: none;
+  padding: 10px;
+  background-color: rgb(190, 171, 154);
+  margin: 10px;
+  border-radius: 50%;
+}
+
+.social_icons a i {
+  font-size: 2em;
+  color: rgb(148, 22, 22);
+  opacity: 0.9;
+}
+
+/* HOVER EFFECT Social Icons */
+
+.social_icons a:hover {
+  background-color: rgb(148, 22, 22);
+  transition: 0.5s;
+}
+
+.social_icons a:hover i {
+  color: rgb(190, 171, 154);
+  transition: 0.5s;
+}
+
+/* ---------FOOTER NAVIGATION --------- */
+
+.footerNav {
+  margin-left: 0px;
+}
+
+.footerNav ul {
+  display: block;
+  justify-content: center;
+}
+
+.footerNav ul li {
+  margin: 10px;
+}
+
+.footerNav ul li a {
+  color: rgb(190, 171, 154);
+  margin: 20px;
+  text-decoration: none;
+  font-size: 1.3em;
+  opacity: 0.7;
+  transition: 0.5s;
+}
+
+.footerNav ul li a:hover {
+  opacity: 1;
+}
+
+.footerNav ul li a:visited {
+  color: rgb(190, 171, 154);
+}
+
+/* ---------------SEARCH BOX------------- */
+
+.box {
+  max-width: 400px;
+  width: 100%;
+}
+
+.box .search-box {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  max-width: 200px;
+  background: #111111dc;
+  margin: auto;
+  box-shadow: 0 5px 10px rgba(255, 255, 255, 0.25);
+  border-radius: 25px;
+}
+
+.search-box input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 25px;
+  background-color: white;
+  outline: none;
+  border: none;
+  padding-left: 20px;
+  font-size: 18px;
+}
+
+.search-box .search_icon {
+  color: white;
+  position: absolute;
+  right: -23px;
+  top: 0;
+  width: 50px;
+  background: #111111dc;
+  height: 104%;
+  border-radius: 0 25px 25px 0;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+}
+
+/* -------------FOOTER TEXT-------------- */
+
+.footerCopyright {
+  padding: 10px;
+  text-align: right;
+  margin-right: 50px;
+}
+
+.footerCopyright p {
+  color: white;
+}
+
+.footerCopyright p span {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+
 /* --------------------------------------- ABOUT PAGE --------------------------------------- */
 
 h1.title {
@@ -247,6 +430,7 @@ h1.title {
   padding-bottom: 0px;
   border-bottom: 0px;
   text-align: center;
+
 }
 
 h5 {
@@ -256,12 +440,15 @@ h5 {
   top: -30px;
   left: -160px;
   text-align: center;
+
 }
 
 div.main_text {
   background-color: rgba(0, 0, 0, 0.185);
   margin-left: 465px;
   margin-bottom: 5px;
+
+
 }
 
 img.jochem_foto {

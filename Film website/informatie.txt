@@ -1,0 +1,17 @@
+Movie1 = Oppenheimer
+movie2 = Barbie
+Movie3 = The Equalizer 3
+Movie4 = The little Mermaid
+Movie5 = Poor Things
+Movie6 = The Nun 2
+Movie7 = Jawan
+Movie8 = Flash
+Movie9 = Mission Impossible Dead Reckoning
+Movie10 = Tomb Raider
+Movie11 = Matilda
+Movie12 = IT 1
+Movie13 = Coming to America
+Movie14 = Sherlock Holmes
+Movie15 = The Red Line
+Movie16 = About Time
+Movie17 = Snowpiercer (movie)
