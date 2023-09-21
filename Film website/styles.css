@@ -1,4 +1,4 @@
-#content_index2 {
+#content_index_movie {
   margin: 0 auto;
   display: grid;
   max-width: 1200px;
@@ -9,18 +9,33 @@
   grid-template-areas:
     ". nav nav nav nav nav ."
     ". intel intel intel intel intel ."
+    ". main_movie main_movie main_movie main_movie main_movie ."
+    ". ft ft ft ft ft ."
+  
 
 
   ;
 }
 
+span.titel_movie {
+  font-weight: bolder;
+  text-decoration: dashed;
+  font-size: 1.4em;
+}
+
+.footer_movie {
+  max-width: 1200px;
+  margin: auto auto;
+}
+
+/* -----------------------------------------INFORMATIE STAMPS---------------------- */
 div.intel {
   grid-area: intel;
-  background: blueviolet;
 }
 
 .intel_grid {
   display: grid;
+  grid-gap: 5px;
   grid-template-areas:
     "k1 k2 k3"
     "k4 k5 k6"
@@ -31,10 +46,18 @@ div.intel {
 }
 
 .kopje {
-  background-color: green;
-  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.678);
+  color: white;
+  padding: 10px 50px;
   border: #000 solid 3px;
   border-radius: 250px;
+  text-align: center;
+}
+
+.kopje p {
+  margin-top: -10px;
+  padding-bottom: 5px;
+  text-decoration: underline;
 }
 
 #kopje1 {
@@ -60,3 +83,84 @@ div.intel {
 #kopje6 {
   grid-area: k6;
 }
+
+/* ----------------------------------------------Text + Photo ------------------------------- */
+
+.maintext_movie {
+  grid-area: main_movie;
+  display: grid ;
+  border: #000 solid 2px;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(6, auto);
+  grid-gap: 10px;
+  grid-template-areas: 
+  "im im im tm tm tm tm tm"
+  "im im im tm tm tm tm tm"
+  "im im im tm tm tm tm tm"
+  "im im im tm tm tm tm tm"
+  "xt xt xt rvw rvw rvw rvw rvw"
+  "xt xt xt rvw rvw rvw rvw rvw"
+  ;
+}
+
+footer {
+  grid-area: ft;
+}
+
+.maintext_movie {
+  background-color: burlywood;
+}
+
+.maintext_movie .img_movie {
+  grid-area: im;
+}
+
+.maintext_movie .text_movie {
+  grid-area: tm;
+  padding: 20px;
+  padding-top: 5px;
+}
+
+.img_movie img{
+  height: 600px;
+}
+
+/* ----------------------------------------------ACTORS---------------------------------- */
+
+.actors_movie {
+  grid-area: xt;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-row: 1fr 1fr;
+  grid-gap: 10px;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+}
+.actors_movie img {
+  height: 200px;
+  display: inline;
+  margin-bottom: 5px;
+}
+
+.actors_movie p {
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
+}
+
+.actors_movie input{
+  background-color: whitesmoke;
+  text-align: center;
+}
+
+/* -----------------------------------------Review---------------------------------------------- */
+
+.review_movie {
+  grid-area: rvw;
+  border: black solid 2px;
+  border-radius: 15px;
+}
+
+
+

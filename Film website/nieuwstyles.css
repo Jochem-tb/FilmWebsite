@@ -23,7 +23,7 @@
 header.index {
   grid-area: header;
   background: rgba(121, 0, 0, 0.692);
-  border: #000000 double 8px;
+  border: #000000 double 5px;
 }
 
 main.index {
@@ -32,6 +32,7 @@ main.index {
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: minmax(50px, auto);
   grid-gap: 15px;
+  max-width: 1200px;
   position: relative;
 }
 
@@ -44,7 +45,7 @@ section.index {
   background-color: rgba(121, 0, 0, 0.692);
   width: 600px;
   text-align: center;
-  border: rgb(0, 0, 0) solid 5px;
+  border: rgb(0, 0, 0) solid 3px;
   border-radius: 20px;
   padding: 10px;
   margin: 10px;
@@ -64,11 +65,11 @@ nav {
   grid-area: nav;
   align-items: center;
   background-color: rgba(121, 0, 0, 0.692);
-  border: rgb(0, 0, 0) solid 5px;
+  border: rgb(0, 0, 0) solid 3px;
   border-radius: 20px;
   float: center;
-  padding-left: auto;
-  padding-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
   font-size: 30px;
 }
 
@@ -155,7 +156,7 @@ nav a:hover {
   display: flex;
   /* CALC= Pixel slide width * total number slides (13) NIET GOED?? 3000 PX voor 16 slides? */
   width: 3000px;
-  animation: play 25s linear infinite;
+  animation: play 40s linear infinite;
 }
 
 @keyframes play {
@@ -234,15 +235,15 @@ main .genreklik {
   padding-right: 5px;
   margin-bottom: 30px;
   background-color: rgba(0, 0, 0, 0.678);
+  text-align: center;
 }
 
 .genreklik p {
   text-align: center;
   position: static;
   text-decoration: underline;
-  padding: 10px;
   font-weight: bolder;
-  font-size: 30px;
+  font-size: 20px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   z-index: 10;
   border: transparent solid 3px;
@@ -252,6 +253,23 @@ main .genreklik {
   color: white;
   border: white solid 3px;
   border-radius: 50px;
+}
+
+.genreklik i {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.genreklik h1 {
+  text-decoration: underline;
+  margin-bottom: 30px;
+
+}
+
+.genreklik h2 {
+  margin: 0;
+  margin-bottom: -20px;
+
 }
 
 .rec_img {
