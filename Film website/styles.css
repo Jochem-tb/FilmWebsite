@@ -11,7 +11,26 @@
     ". intel intel intel intel intel ."
     ". main_movie main_movie main_movie main_movie main_movie ."
     ". ft ft ft ft ft ."
-  
+
+
+
+  ;
+}
+
+#content_index_actor {
+  margin: 0 auto;
+  display: grid;
+  max-width: 1200px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-gap: 10px;
+  position: relative;
+  grid-template-areas:
+    "nav nav"
+    "intel intel"
+    "main_movie main_movie"
+    "ft ft"
+
 
 
   ;
@@ -30,28 +49,33 @@ span.titel_movie {
 
 /* -----------------------------------------INFORMATIE STAMPS---------------------- */
 div.intel {
-  grid-area: intel;
+  grid-area: int;
+  position: absolute;
+  right: 100px;
+  bottom: 30px;
 }
 
 .intel_grid {
   display: grid;
-  grid-gap: 5px;
+  grid-gap: 10px;
+  column-gap: 40px;
   grid-template-areas:
     "k1 k2 k3"
     "k4 k5 k6"
   ;
   grid-template-columns: 1fr, 1fr, 1fr;
-  grid-template-rows: 100px, 100px;
+  grid-template-rows: 10px, 10px;
   justify-content: space-evenly;
 }
 
 .kopje {
   background-color: rgba(0, 0, 0, 0.678);
   color: white;
-  padding: 10px 50px;
+  padding: 10px 10px;
   border: #000 solid 3px;
   border-radius: 250px;
   text-align: center;
+  font-size: 15px;
 }
 
 .kopje p {
@@ -86,29 +110,42 @@ div.intel {
 
 /* ----------------------------------------------Text + Photo ------------------------------- */
 
+.maintext_actor {
+  display: inline;
+  padding: 20px;
+  background-color: burlywood;
+  grid-template-columns: 1100px;
+  display: grid;
+  border: #000 solid 2px;
+  grid-gap: 10px;
+  width: 100%;
+}
+
+
+
+
 .maintext_movie {
   grid-area: main_movie;
-  display: grid ;
+  padding: 20px;
+  background-color: burlywood;
+  display: grid;
   border: #000 solid 2px;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(6, auto);
   grid-gap: 10px;
-  grid-template-areas: 
-  "im im im tm tm tm tm tm"
-  "im im im tm tm tm tm tm"
-  "im im im tm tm tm tm tm"
-  "im im im tm tm tm tm tm"
-  "xt xt xt rvw rvw rvw rvw rvw"
-  "xt xt xt rvw rvw rvw rvw rvw"
+  grid-template-areas:
+    "im im im tm tm tm tm tm"
+    "im im im tm tm tm tm tm"
+    "im im im tm tm tm tm tm"
+    "im im im tm tm tm tm tm"
+    "xt xt xt int int int int int"
+    "xt xt xt int int int int int"
+    "xt xt xt int int int int int"
   ;
 }
 
 footer {
   grid-area: ft;
-}
-
-.maintext_movie {
-  background-color: burlywood;
 }
 
 .maintext_movie .img_movie {
@@ -121,7 +158,7 @@ footer {
   padding-top: 5px;
 }
 
-.img_movie img{
+.img_movie img {
   height: 600px;
 }
 
@@ -137,9 +174,10 @@ footer {
   text-align: center;
   margin: auto;
 }
+
 .actors_movie img {
-  max-width:230px;
-  max-height:150px;
+  max-width: 230px;
+  max-height: 150px;
   width: auto;
   height: auto;
   display: inline;
@@ -152,14 +190,14 @@ footer {
   padding: 0;
 }
 
-.actors_movie input{
+.actors_movie input {
   background-color: whitesmoke;
   text-align: center;
 }
 
-.actor1 input:hover{
-color: red;
-opacity: 0.8;
+.actor1 input:hover {
+  color: red;
+  opacity: 0.8;
 }
 
 /* -----------------------------------------Review---------------------------------------------- */
@@ -169,6 +207,3 @@ opacity: 0.8;
   border: black solid 2px;
   border-radius: 15px;
 }
-
-
-

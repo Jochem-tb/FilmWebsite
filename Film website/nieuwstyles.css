@@ -73,7 +73,7 @@ nav {
   font-size: 30px;
 }
 
-nav   a {
+nav a {
   position: static;
   text-decoration: none;
   font-weight: bold;
@@ -156,7 +156,7 @@ nav a:hover {
   display: flex;
   /* CALC= Pixel slide width * total number slides (13) NIET GOED?? 3000 PX voor 16 slides? */
   width: 3000px;
-  animation: play 40s linear infinite;
+  animation: play 45s linear infinite;
 }
 
 @keyframes play {
@@ -249,11 +249,11 @@ main .genreklik {
   border: transparent solid 3px;
 }
 
-.genreklik p:hover {
+/* .genreklik p:hover {
   color: white;
   border: white solid 3px;
   border-radius: 50px;
-}
+} */
 
 .genreklik i {
   margin-right: 10px;
