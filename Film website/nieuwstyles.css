@@ -73,7 +73,7 @@ nav {
   font-size: 30px;
 }
 
-nav a {
+nav   a {
   position: static;
   text-decoration: none;
   font-weight: bold;
